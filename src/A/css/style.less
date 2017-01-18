@@ -1,4 +1,451 @@
 @charset "UTF-8";
-
 @import '_base';
 @import '_common';
+@import '_sprite';
+
+table{
+  width:100%;
+  th,td{
+    border-left:1px solid #e6e6e6;
+    border-bottom:1px solid #e6e6e6;
+      &:first-child{
+        border-left:none;
+      }
+    }
+    th{
+        height:28px;
+    }
+    td{
+        height:20px;
+        padding:0 0 0 10px;
+        &.keyword{
+            text-align:center;
+        }
+    }
+  }
+.ad_banner{
+  background-image:url(../img/banner_bgbar.gif);
+  background-repeat:repeat-x;
+  > a{
+    display:block;
+    width:1100px;
+    margin:0 auto;
+  }
+}
+.container_wrap{
+  *zoom: 1;
+  width:1100px;
+  margin:0 auto;
+  overflow:hidden;
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+    h3{
+        margin:0 0 15px 0;
+        text-indent:-999px;
+        overflow:hidden;
+    }
+    .box{
+        margin:20px 0 0 0;
+        padding:30px;
+        border:1px solid #e6e6e6;
+        z-index:1;
+      }
+    .Auction{
+        color:#f5676e;
+        font-weight:bold;
+    }
+    .Gmarket{
+        color:#25ad1d;
+        font-weight:bold;
+    }
+    .on{
+      color:#0477bb;
+    }
+    .num{
+      color:#04bbae;
+      font-weight:bold;
+    }
+    .ad_managment_list{
+        margin:9px 0 0 0;
+        padding:0 0 0 7px;
+        background:url(../img/bg_dot.gif);
+        background-repeat:no-repeat;
+        background-position:0 7px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        width: 485px;
+        overflow:hidden;
+    }
+    .ad_management_data{
+        position:absolute;
+        right:30px;
+    }
+.ad_managment_more{
+    position:absolute;
+    padding:0 10px 0 0;
+    top:30px;
+    right:30px;
+    text-decoration:underline;
+    background-image:url(../img/more_arrow.gif);
+    background-repeat:no-repeat;
+    background-position:38px 50%;
+    letter-spacing:-1px;
+    > a {text-decoration: underline;}
+
+}
+.notify{
+    background-position:50px 50%;
+}
+.my_impo_management{
+    background-position:71px 50%;
+}
+
+  select{
+    width:280px;
+    height:25px;
+    margin:0 10px 0 10px;
+    border:1px solid #ccc
+  }
+  .first_content_box{
+    clear:both;
+    .ad_management_summary{
+      position:relative;
+      float:left;
+      width:658px;
+      height:399px;
+      .ad_center_title{
+        background-image:url(../img/ad_center_title1.gif);
+        background-repeat:no-repeat;
+      }
+      .ad_button{
+        position:absolute;
+        right:150px;
+        top:30px;
+      }
+      .registration_ad{
+        right:125px;
+      }
+      .many_ad{
+        right:30px;
+        width:90px;
+        height:25px;
+      }
+      .select_master{
+        position:relative;
+        width:658px;
+        margin:8px 0 0 0;
+        padding:10px 0 10px 0;
+        border:1px solid #e2e2e2;
+        background-color:#f7f7f7;
+        p{
+          padding:0 10px 0 10px;
+          &.ad_choice_id{
+
+          }
+          .ad_search{
+              padding:0 20px 0 0;
+              background-image:url(../img/select_arrow.gif);
+              background-repeat:no-repeat;
+              background-position:68px 60%;
+              text-decoration:underline;
+          }
+        }
+        }
+        .group_num{
+          background-color:#fff;
+          padding:14px 0 14px 0;
+        }
+        .tal_box{
+            .ad_admin{
+              position:relative;
+              background-color:#eeeeee;
+              select{
+                width:485px;
+              }
+              span{
+                position:absolute;
+                top:13px;
+              }
+            }
+            .ad_management_btton{
+                position:absolute;
+                top:10px;
+                right:10px;
+            }
+            .ad_date{
+              margin:0;
+              background-color:#f7f7f7;
+              border-top:none;
+              overflow:hidden;
+              .exposure_date{
+                float:left;
+                padding:0 20px 0 20px;
+                background:url(../img/bar.gif);
+                background-repeat:no-repeat;
+                background-position:0 50%;
+                &:first-child{
+                    background:none;
+                }
+              }
+            }
+        .ad_management_tbl_thead{
+            width:658px;
+            height:30px;
+            border:1px solid #e6e6e6;
+            border-top:none;
+            border-bottom:none;
+            line-height:30px;
+        }
+        .ad_management_tbl{
+            width:658px;
+            max-height:172px;
+            border:1px solid #e6e6e6;
+            border-top:none;
+            overflow-x:hidden;
+            overflow-y:auto;
+          }
+        }
+      }
+    }
+    .first_content_right{
+      float:right;
+      z-index:10;
+      .my_impomation{
+        position:relative;
+        width:298px;
+        height:84px;
+        .ad_my_impo_title{
+            background-image:url(../img/ad_my_impo_title.gif);
+            background-repeat:no-repeat;
+        }
+        .my_impomation_box{
+            position:relative;
+            padding:5px 0px 5px 0px;
+            border:1px solid #e2e2e2;
+            clear: both;
+            display: block;
+            content: "";
+            p{
+                padding:0 0 5px 15px;
+                border-bottom:1px solid #e2e2e2;
+            }
+            ul{
+                padding:3px 0 5px 15px;
+                overflow:hidden;
+                .my_impomation_list{
+                    float:left;
+                    margin-right:30px;
+                }
+            }
+            .minutely_button{
+                position:absolute;
+                right:-1px;
+                top:37px;
+            }
+        }
+      }
+      .sell_balance{
+        position:relative;
+        display:inline-block;
+        width:298px;
+        height:233px;
+        z-index:10;
+        .ad_sellbalance_title{
+          background-image:url(../img/ad_sellbalance_title.gif);
+          background-repeat:no-repeat;
+        }
+        .total_sell_balance{
+          width:298px;
+          height:30px;
+          margin:0 0 10px 0;
+          background-color:#f7f7f7;
+          .total_sell_balance_list{
+            float:left;
+            margin:0 30px 0 10px;
+            line-height:30px;
+          }
+        }
+        select{
+          width:200px;
+          margin:0 3px 0 0;
+        }
+        .sell_balance_box{
+          display:inline-block;
+          width:265px;
+          position:relative;
+          position:relative;
+          margin:5px 0 0 0;
+          padding:10px 15px 10px 15px;
+          .sell_balance_box_list{
+            margin-bottom:5px;
+          }
+          .total_list{
+            margin:10px 0 5px 0;
+          }
+          .more{
+            position:absolute;
+            display:inline-block;
+            top:101px;
+            left:122px;
+            width:15px;
+            height:15px;
+            background-image:url(../img/more.gif);
+            background-repeat:no-repeat;
+            text-indent:-999px;
+            overflow:hidden;
+          }
+          .won{
+            position:absolute;
+            right:15px;
+          }
+        }
+        .sell_balance_notice{
+            position:absolute;
+            width:290px;
+            border:1px solid #6f6f6f;
+            top:60px;
+            left:20px;
+            background-color:#fff;
+            z-index:100;
+            .sell_balance_notice_title{
+                padding:8px 8px 8px 30px;
+                border-bottom:1px solid #e8e8e8;
+                background-image:url(../img/notice_button.gif);
+                background-repeat:no-repeat;
+                background-position:15px 50%;
+            }
+            .sell_balance_notice_box{
+                padding:15px;
+                border-bottom:1px solid #e8e8e8;
+                .balance_notice_list{
+                  display:inline-block;;
+                    margin:0 0 15px 0;
+                    padding:0 0 0 15px;
+                    background-image:url(../img/bg_dot2.gif);
+                    background-repeat:no-repeat;
+                    background-position:4px 15%;
+                    letter-spacing:-1px;
+                    dd{
+                        color:#666666;
+                    }
+                }
+                .notice_list_last{
+                    margin:0;
+                }
+            }
+            .checkbox{
+                position: relative;
+                padding:8px 15px;
+                font-size:11px;
+                letter-spacing:-1px;
+                overflow:hidden;
+                label{
+                    margin:0 5px 0 0;
+                    vertical-align:top;
+                }
+                .close{
+                    position: absolute;
+                    right: 10px;
+                    margin:3px 5px 0 0;
+                }
+            }
+            .notice_second_box{
+                position:absolute;
+                width:225px;
+                padding:15px;
+                top:245px;
+                left:75px;
+                color:#666;
+                background-color:#fff;
+                border:1px solid #6f6f6f;
+                font-size:11px;
+                letter-spacing:-1px;
+                .notice_second_box_close{
+                    position:absolute;
+                    top:15px;
+                    right:15px;
+                }
+            }
+        }
+      }
+    }
+    .bottom_content{
+        clear:both;
+        .second_content{
+            float:left;
+            overflow:hidden;
+            .notice{
+                position:relative;
+                width:658px;
+                height:172px;
+                .ad_notice_title{
+                    background-image:url(../img/ad_notice_title.gif);
+                    background-repeat:no-repeat;
+                }
+            }
+            .best_question{
+                position:relative;
+                width:658px;
+                height:123px;
+                .ad_question_title{
+                    background-image:url(../img/ad_question_title.gif);
+                    background-repeat:no-repeat;
+                }
+            }
+        }
+        .third_content{
+            float:right;
+            overflow:hidden;
+            .education_impo_adguide{
+                position:relative;
+                width:298px;
+                height:172px;
+                .ad_education_impo_title{
+                  background-image:url(../img/ad_education_impo_title.gif);
+                  background-repeat:no-repeat;
+                }
+                .education_impo_box{
+                  position:absolute;
+                  right:30px;
+                  top:28px;
+                  .education_impo{
+                    float:left;
+                    margin-right:2px;
+                  }
+                }
+                .education_impo_txt{
+                  background-color:#f7f7f7;
+                  padding:10px;
+                  letter-spacing:-1px;
+                }
+                .ad_guide_impo_title {
+                  position:relative;
+                  margin:22px 0 13px 0;
+                  background-image:url(../img/ad_guide_impo_title.gif);
+                  background-repeat:no-repeat;
+                }
+                .guide_button1{
+                    margin:0 5px 0 0;
+                    text-decoration:none;
+                }
+            }
+            .service_center{
+                width:298px;
+                height:123px;
+                .ad_servicecenter_title{
+                    background-image:url(../img/ad_servicecenter_title.gif);
+                    background-repeat:no-repeat;
+                }
+                .main_number{
+                    margin:0 5px 0 0;
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+  }

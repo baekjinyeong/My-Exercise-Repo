@@ -4,10 +4,196 @@
 // Common
 // =============================================================================
 
-header {
-	background: #ddd;
+/* skipnav */
+#skipnav{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  a{
+    display:block;
+    height:1px;
+    margin-bottom:-1px;
+    color:#333;
+    text-align:center;
+    text-decoration:none;
+    font-size:12px;
+    overflow:hidden;
+    &:hover, &:focus, &:active{
+      display:block;height:auto;padding:5px 0; background:#f2f2f2;
+    }
+  }
 }
 
-footer {
-	border-top: 1px solid #aaa;
+
+/* header */
+#header {
+  min-width:1100px;
+  background-image:url(../img/bg.gif);
+  background-repeat:repeat-x;
+  background-position:0 0;
+  .header_wrap{
+    position:relative;
+    width:1100px;
+    height:60px;
+    margin:0 auto;
+    h1{
+      position:absolute;
+      top:18px;
+    }
+    .login{
+      position:relative;
+      .login_text{
+        position:absolute;
+        right:70px;
+        top:21px;
+        color:#999;
+        font-size:11px;
+      }
+      .logout_button{
+        position:absolute;
+        right:0;
+        top:20px;
+      }
+    }
+
+  }
+  .nav{
+    position:absolute;
+    top:19px;
+    left:13%;
+    .menu{
+      .items{
+        float:left;
+        margin-left:44px;
+        a{
+           display:block;
+           background-repeat:no-repeat;
+           text-indent:-999px;
+           overflow:hidden;
+        }
+        &.menu__item1 a {
+             width:73px;
+             height:24px;
+             background-image:url(../img/menu_item1.gif);
+           }
+           &.menu__item2 a{
+             width:72px;
+             height:24px;
+             background-image:url(../img/menu_item2.gif);
+           }
+           &.menu__item3 a{
+             width:74px;
+             height:24px;
+             background-image:url(../img/menu_item3.gif);
+           }
+           &.menu__item4 a{
+             width:61px;
+             height:24px;
+             background-image:url(../img/menu_item4.gif);
+           }
+           &.menu__item5 a{
+             width:74px;
+             height:24px;
+             background-image:url(../img/menu_item5.gif);
+           }
+           &.menu__item6 a{
+             width:73px;
+             height:24px;
+             background-image:url(../img/menu_item6.gif);
+           }
+      }
+    }
+  }
+}
+
+
+/* footer */
+#footer {
+  clear:both;
+  min-width:1100px;
+  margin:20px 0 0 0;
+  height:185px;
+  color:#999;
+  font-size:11px;
+  background-color:#f7f7f7;
+  border-top:1px solid #e2e2e2;
+  .footer_top{
+    border-bottom:1px solid #e2e2e2;
+    letter-spacing:-1px;
+    .footer_inner_top{
+      width:1100px;
+      margin:0 auto;
+      padding:15px 0 15px 0;
+      overflow:hidden;
+      .footer_top_list{
+        float:left;
+        padding:0 35px 0 35px;
+        background:url(../img/bar.gif);
+        background-repeat:no-repeat;
+        background-position:0 50%;
+        letter-spacing:-1px;
+        &:first-child{
+          padding:0 35px 0 0;
+          background:none;
+        }
+        a{
+          color:#999;
+          text-decoration:none;
+        }
+      }
+    }
+  }
+  .footer_bottom{
+    .footer_inner_bottom{
+      position:relative;
+      width:1100px;
+      margin:0 auto;
+      padding:30px 0 30px 0;
+      .footer_company_impo{
+        overflow:hidden;
+        .company_impo{
+          float:left;
+          padding:0 10px 0 10px;
+          background:url(../img/bar.gif);
+          background-repeat:no-repeat;
+          background-position:0 50%;
+          &:first-child{
+            padding:0 10px 0 0;
+            background:none;
+          }
+        }
+        + .footer_company_impo {margin-top: 10px;}
+      }
+      .footer_company_impo2{
+        overflow:hidden;
+        .company_impo2{
+          float:left;
+          margin:10px 0 0 0;
+          padding:0 10px 0 10px;
+          background:url(../img/bar.gif);
+          background-repeat:no-repeat;
+          background-position:0 50%;
+          &:first-child{
+            padding:0 10px 0 0;
+            background:none;
+          }
+        }
+      }
+      .copyright{
+        margin:20px 0 0 0;
+      }
+      .family_logo{
+        position:absolute;
+        top:30px;
+        right:0;
+        .family_logo_list{
+          float:left;
+          margin:0 30px 0 0;
+        }
+        .gmarket_logo{
+          margin:0;
+        }
+      }
+    }
+  }
 }

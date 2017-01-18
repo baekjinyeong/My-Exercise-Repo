@@ -1,0 +1,27 @@
+@sprite-common-ico_facebook_on: -0px -0px 180px 180px;
+@sprite-common-ico_instagram_on: -0px -180px 180px 180px;
+@sprite-common-ico_utube: -0px -360px 180px 180px;
+@sprite-common-ico_utube2: -0px -540px 180px 180px;
+
+.sprite-common (@sprite){
+	background-image: url('/img/common/sprite-common.png');
+	background-repeat: no-repeat;
+  @sprite-offset-x: extract(@sprite, 1);
+	@sprite-offset-y: extract(@sprite, 2);
+	width: extract(@sprite, 3);
+	height: extract(@sprite, 4);
+	background-position: @sprite-offset-x @sprite-offset-y;
+}
+@sprite-icon-ico_facebook: -0px -0px 180px 180px;
+@sprite-icon-ico_instagram: -0px -180px 180px 180px;
+@sprite-icon-ico_utube: -0px -360px 180px 180px;
+
+.sprite-icon (@sprite){
+	background-image: url('/img/common/sprite-icon.png');
+	background-repeat: no-repeat;
+  @sprite-offset-x: extract(@sprite, 1);
+	@sprite-offset-y: extract(@sprite, 2);
+	width: extract(@sprite, 3);
+	height: extract(@sprite, 4);
+	background-position: @sprite-offset-x @sprite-offset-y;
+}
