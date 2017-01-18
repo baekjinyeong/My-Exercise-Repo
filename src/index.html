@@ -2,23 +2,39 @@
 <html lang="ko-KR">
 	<head>
 		<meta charset="UTF-8">
-		<title>프로젝트명</title>
-		<link rel="stylesheet" href="css/style.css">
+		<title>연습용 저장소</title>
+		<link rel="stylesheet" href="css/style.less">
+		<style type="text/css">
+			html {background: #fff;color: #333;font-size: 100%;font-family: sans-serif;}
+			body {border:1px solid #cfcfcf;}
+			h1 {border-left:7px solid #ecb700;color: #666;margin: 20px 30px;padding: 0 0 0 10px;}
+			.project_list_wrap{padding: 0 40px 0 30px;}
+			.project_list{color: #666;list-style: none;}
+			.project_list--box {border-bottom: 1px dotted #cfcfcf;padding: 15px 15px 15px 0;font-size: 18px;}
+			.project_list--box:last-child {border-bottom: none;}
+			.project_list--link{display: block;padding: 5px 0 0 0;font-size: 16px;color: #999;text-decoration: none;}
+		</style>
 	</head>
 	<body>
-		<h1>프로젝트명</h1>
+		<h1>My Exercise Project</h1>
 
-		<ul>
-			<li>
-				A
-				<ul>
-					<li><a href="A/main.html" target="_blank">Main</a></li>
+		<ul class="project_list_wrap">
+			<li class="project_list project_list--box">
+				Exercise Project1
+				<ul class="project_item_list">
+					<li class="project_list project_item"><a href="A/main.html" target="_blank" class="project_list project_list--link">Exercise Project title</a></li>
 				</ul>
 			</li>
-			<li>
-				B
-				<ul>
-					<li><a href="B/main.html" target="_blank">Main</a></li>
+			<li class="project_list project_list--box">
+				Exercise Project2
+				<ul class="project_item_list">
+					<li class="project_list project_item"><a href="B/main.html" target="_blank" class="project_list project_list--link">Exercise Project title</a></li>
+				</ul>
+			</li>
+			<li class="project_list project_list--box">
+				Exercise Project3
+				<ul class="project_item_list">
+					<li class="project_list project_item"><a href="C/main.html" target="_blank" class="project_list project_list--link">Exercise Project title</a></li>
 				</ul>
 			</li>
 		</ul>
