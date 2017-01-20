@@ -65,44 +65,65 @@
       .items{
         float:left;
         margin-left:44px;
-        a{
+        span{
            display:block;
            background-repeat:no-repeat;
            text-indent:-999px;
            overflow:hidden;
         }
-        &.menu__item1 a {
+        &.menu__item1 span {
              width:73px;
              height:24px;
              background-image:url(../img/menu_item1.gif);
            }
-           &.menu__item2 a{
+           &.menu__item2 span{
              width:72px;
              height:24px;
              background-image:url(../img/menu_item2.gif);
            }
-           &.menu__item3 a{
+           &.menu__item3 span{
              width:74px;
              height:24px;
              background-image:url(../img/menu_item3.gif);
            }
-           &.menu__item4 a{
+           &.menu__item4 span{
              width:61px;
              height:24px;
              background-image:url(../img/menu_item4.gif);
            }
-           &.menu__item5 a{
+           &.menu__item5 span{
              width:74px;
              height:24px;
              background-image:url(../img/menu_item5.gif);
            }
-           &.menu__item6 a{
+           &.menu__item6 span{
              width:73px;
              height:24px;
              background-image:url(../img/menu_item6.gif);
            }
       }
+	  .items_link{
+		  position: relative;
+	  }
     }
+	.sub_menu_wrap{
+		position: absolute;
+		top:41px;
+		width:100%;
+	}
+	.sub_menu_list{
+		padding: 10px 30px;
+		background-color: #cfcfcf;
+		&:after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+	.sub_menu_item{
+		float: left;
+		padding: 0 15px 0 0;
+	}
   }
 }
 
