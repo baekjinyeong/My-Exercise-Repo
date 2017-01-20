@@ -2,19 +2,112 @@
 <html lang="ko-KR">
 	<head>
 		<meta charset="UTF-8">
-		<title>B안</title>
+		<title>메뉴연습</title>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<!--#include file="/Project_02/_include/header.html" -->
 
 		<main role="main">
-			본문
+			<h1>HTML Menus</h1>
+
+			<div class="content_box hover-dropdown">
+				<p class="menu_ex_title"> Hover Dropdowns</p>
+				<ul class="menu_depth_box">
+					<li class="menu_depth"><a href="#">Home</a></li>
+					<li class="menu_depth"><a href="#">News</a></li>
+					<li class="menu_depth"><a href="#">Dropdown</a>
+						<ul class="dropdown-content">
+							<li class="dropdown-content-list"><a href="#">Link1</a></li>
+							<li class="dropdown-content-list"><a href="#">Link2</a></li>
+							<li class="dropdown-content-list"><a href="#">Link3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="content_box">
+				<p class="menu_ex_title"> How TO - Tabs</p>
+				<ul class="tabs">
+					<li class="menu_tabs"><a href="#" class="tab_link" onclick="openCnt(event,'London')">London</a></li>
+					<li class="menu_tabs"><a href="#" class="tab_link" onclick="openCnt(event,'Paris')">Paris</a></li>
+					<li class="menu_tabs"><a href="#" class="tab_link" onclick="openCnt(event,'Tokyo')">Tokyo</a></li>
+				</ul>
+
+				<div id="London" class="tab_content">
+					<h2>London</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's
+						standard dummy text ever since the 1500s,
+						when an unknown printer took a galley of type
+						and scrambled it to make a type specimen book.
+						It has survived not only five centuries,
+						but also the leap into electronic typesetting,
+						remaining essentially unchanged. It was popularised
+						in the 1960s with the release of Letraset sheets
+						containing Lorem Ipsum passages, and more recently
+						with desktop publishing software like Aldus PageMaker
+						including versions of Lorem Ipsum.</p>
+				</div>
+
+				<div id="Paris" class="tab_content">
+					<h2>Paris</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's
+						standard dummy text ever since the 1500s,
+						when an unknown printer took a galley of type
+						and scrambled it to make a type specimen book.
+						It has survived not only five centuries,
+						but also the leap into electronic typesetting,
+						remaining essentially unchanged. It was popularised
+						in the 1960s with the release of Letraset sheets
+						containing Lorem Ipsum passages, and more recently
+						with desktop publishing software like Aldus PageMaker
+						including versions of Lorem Ipsum.</p>
+				</div>
+
+				<div id="Tokyo" class="tab_content">
+					<h2>Tokyo</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's
+						standard dummy text ever since the 1500s,
+						when an unknown printer took a galley of type
+						and scrambled it to make a type specimen book.
+						It has survived not only five centuries,
+						but also the leap into electronic typesetting,
+						remaining essentially unchanged. It was popularised
+						in the 1960s with the release of Letraset sheets
+						containing Lorem Ipsum passages, and more recently
+						with desktop publishing software like Aldus PageMaker
+						including versions of Lorem Ipsum.</p>
+				</div>
+			</div>
 		</main>
 
-		<!--#include file="/Project_02/_include/footer.html" -->
 
-		<script src="vendor/library.js"></script>
-		<script src="js/script.js"></script>
+		<!-- <script src="vendor/library.js"></script>
+		<script src="js/script.js"></script> -->
+<script>
+	//openCnt라는 함수의 값
+	function openCnt(evt,cityName){
+		var i, tabcontent, tablink; // 변수선언
+
+		tabcontent = document.getElementsByClassName("tab_content"); // 선언해준 변수에 클래스를 가져온다.
+
+		for(i=0; i<tabcontent.length; i++){
+			tabcontent[i].style.display = "none";
+		}
+
+		tablink = document.getElementsByClassName("tab_link");
+		// active 클래스를 제거해준다. active --> ""
+		for(i=0; i<tablink.length; i++){
+			tablink[i].className = tablink[i].className.replace("active","");
+		}
+
+		// id값(cityName)을 가져와 스타일을 블럭해준다.
+		// 현재 탭을 연 다음 활성화클래스(active)를 추가한다.
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += "active";
+	}
+</script>
 	</body>
 </html>
