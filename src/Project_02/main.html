@@ -42,11 +42,7 @@
 						and scrambled it to make a type specimen book.
 						It has survived not only five centuries,
 						but also the leap into electronic typesetting,
-						remaining essentially unchanged. It was popularised
-						in the 1960s with the release of Letraset sheets
-						containing Lorem Ipsum passages, and more recently
-						with desktop publishing software like Aldus PageMaker
-						including versions of Lorem Ipsum.</p>
+						remaining essentially unchanged.</p>
 				</div>
 
 				<div id="Paris" class="tab_content">
@@ -79,6 +75,51 @@
 						containing Lorem Ipsum passages, and more recently
 						with desktop publishing software like Aldus PageMaker
 						including versions of Lorem Ipsum.</p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's
+						standard dummy text ever since the 1500s,
+						when an unknown printer took a galley of type
+						and scrambled it to make a type specimen book.
+						It has survived not only five centuries,
+						but also the leap into electronic typesetting,
+						remaining essentially unchanged. It was popularised
+						in the 1960s with the release of Letraset sheets
+						containing Lorem Ipsum passages, and more recently
+						with desktop publishing software like Aldus PageMaker
+						including versions of Lorem Ipsum.</p>
+				</div>
+			</div>
+
+			<div class="content_box">
+				<p class="menu_ex_title"> How TO - Full screen Overlay Navigation</p>
+				<ul class="full_screen_nav-list">
+					<li class="full_screen_nav-item">
+						<a href="#d" class="full_screen_nav-link" onclick="openNav()">Slide Right</a>
+					</li>
+					<li class="full_screen_nav-item">
+						<a href="#f" class="full_screen_nav-link" onclick="slideDownNav()">Slide Down</a>
+					</li>
+				</ul>
+
+				<div id="myNav" class="mynav overlay">
+					<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+
+					<div class="overlay-content">
+						<a href="">About</a>
+						<a href="">Services</a>
+						<a href="">Clients</a>
+						<a href="">Contact</a>
+					</div>
+				</div>
+				<div id="myNav2" class="mynav overlay2">
+					<a href="#" class="closebtn" onclick="closeNav2()">&times;</a>
+
+					<div class="overlay-content">
+						<a href="">About</a>
+						<a href="">Services</a>
+						<a href="">Clients</a>
+						<a href="">Contact</a>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -87,27 +128,43 @@
 		<!-- <script src="vendor/library.js"></script>
 		<script src="js/script.js"></script> -->
 <script>
-	//openCnt라는 함수의 값
 	function openCnt(evt,cityName){
-		var i, tabcontent, tablink; // 변수선언
+		var i, tabcontent, tablink;
 
-		tabcontent = document.getElementsByClassName("tab_content"); // 선언해준 변수에 클래스를 가져온다.
+		tabcontent = document.getElementsByClassName("tab_content");
 
-		for(i=0; i<tabcontent.length; i++){
+		for (i=0; i<tabcontent.length; i++){
 			tabcontent[i].style.display = "none";
 		}
 
 		tablink = document.getElementsByClassName("tab_link");
-		// active 클래스를 제거해준다. active --> ""
-		for(i=0; i<tablink.length; i++){
+
+		for (i=0; i<tablink.length; i++){
 			tablink[i].className = tablink[i].className.replace("active","");
 		}
 
-		// id값(cityName)을 가져와 스타일을 블럭해준다.
-		// 현재 탭을 연 다음 활성화클래스(active)를 추가한다.
 		document.getElementById(cityName).style.display = "block";
 		evt.currentTarget.className += "active";
 	}
+
+
+	/* slide Right */
+	function openNav() {
+	    document.getElementById("myNav").style.width = "100%";
+	}
+
+	function closeNav() {
+	    document.getElementById("myNav").style.width = "0%";
+	}
+
+	/* slide Down */
+	function slideDownNav(){
+		document.getElementById("myNav2").style.height = "100%";
+	}
+	function closeNav2(){
+		document.getElementById("myNav2").style.height = "0%";
+	}
+
 </script>
 	</body>
 </html>
