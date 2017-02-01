@@ -7,7 +7,7 @@
 	</head>
 	<body>
 
-		<main role="main">
+		<main role="main" id="wrap">
 			<h1>HTML Menus</h1>
 
 			<div class="content_box hover-dropdown">
@@ -105,22 +105,37 @@
 					<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
 
 					<div class="overlay-content">
-						<a href="">About</a>
-						<a href="">Services</a>
-						<a href="">Clients</a>
-						<a href="">Contact</a>
+						<a href="#">About</a>
+						<a href="#">Services</a>
+						<a href="#">Clients</a>
+						<a href="#">Contact</a>
 					</div>
 				</div>
 				<div id="myNav2" class="mynav overlay2">
 					<a href="#" class="closebtn" onclick="closeNav2()">&times;</a>
 
 					<div class="overlay-content">
-						<a href="">About</a>
-						<a href="">Services</a>
-						<a href="">Clients</a>
-						<a href="">Contact</a>
+						<a href="#">About</a>
+						<a href="#">Services</a>
+						<a href="#">Clients</a>
+						<a href="#">Contact</a>
 					</div>
 				</div>
+			</div>
+
+			<div class="content_box">
+				<p class="menu_ex_title"> How TO - Sidenav Push Content</p>
+				<a href="#" class="openbtn" onclick="openbtn()">OPEN</a>
+				<div id="myNav3" class="mynav overlay3">
+					<a href="#" class="closebtn" onclick="closeNav3()">&times;</a>
+					<div class="overlay-content">
+						<a href="#">About</a>
+						<a href="#">Services</a>
+						<a href="#">Clients</a>
+						<a href="#">Contact</a>
+					</div>
+				</div>
+
 			</div>
 		</main>
 
@@ -163,6 +178,17 @@
 	}
 	function closeNav2(){
 		document.getElementById("myNav2").style.height = "0%";
+	}
+
+	/* Sidenav Push Content */
+	function openbtn(){
+		document.getElementById("myNav3").style.width = "20%";
+		document.getElementById("wrap").style.marginLeft = "20%";
+
+	}
+	function closeNav3() {
+		document.getElementById("myNav3").style.width = "0";
+		document.getElementById("wrap").style.marginLeft = "0";
 	}
 
 </script>
