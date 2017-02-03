@@ -6,10 +6,41 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div class="wrap">
+		<div id="wrap">
+			<div class="header">
+				<h1 class="logo"></h1>
+				<a href="#" class="menu_btn" onclick="myNavbtn()">
+					<span></span>
+				</a>
+				<div id="myNav" class="nav">
+					<ul class="menu_list">
+						<li class="menu_item"><a href="#" class="menu_link">NESW</a></li>
+						<li class="menu_item"><a href="#" class="menu_link">CATWAKL</a></li>
+						<li class="menu_item"><a href="#" class="menu_link">FASHION</a></li>
+						<li class="menu_item"><a href="#" class="menu_link">BEAUTY</a></li>
+						<li class="menu_item"><a href="#" class="menu_link">PEOPLE</a></li>
+						<li class="menu_item"><a href="#" class="menu_link">VIDEO</a></li>
+						<li class="menu_item">
+							<a href="#" class="menu_link munu_link_dropdown-menu">
+								<span>MORE</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+
+
 
 		</div>
 
-		<script src="js/script.js"></script>
+	<script>
+		function myNavbtn(){
+			document.getElementById("myNav").style.display="block";
+			document.getElementById("wrap").style.marginRight="30%";
+		}
+
+	</script>
 	</body>
 </html>
