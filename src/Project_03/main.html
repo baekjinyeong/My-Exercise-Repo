@@ -7,40 +7,57 @@
 	</head>
 	<body>
 		<div id="wrap">
-			<div class="header">
-				<h1 class="logo"></h1>
+			<header class="header_wrapper">
+				<h1 class="logo">로고</h1>
 				<a href="#" class="menu_btn" onclick="myNavbtn()">
 					<span></span>
 				</a>
-				<div id="myNav" class="nav">
-					<ul class="menu_list">
-						<li class="menu_item"><a href="#" class="menu_link">NESW</a></li>
-						<li class="menu_item"><a href="#" class="menu_link">CATWAKL</a></li>
-						<li class="menu_item"><a href="#" class="menu_link">FASHION</a></li>
-						<li class="menu_item"><a href="#" class="menu_link">BEAUTY</a></li>
-						<li class="menu_item"><a href="#" class="menu_link">PEOPLE</a></li>
-						<li class="menu_item"><a href="#" class="menu_link">VIDEO</a></li>
-						<li class="menu_item">
-							<a href="#" class="menu_link munu_link_dropdown-menu">
-								<span>MORE</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-
-			</div>
-
-
-
-
+			</header>
+			<nav id="myNav" class="nav" style="right:-60%;">
+				<ul class="menu_list">
+					<li class="menu_item"><a href="#" class="menu_link">NEWS</a></li>
+					<li class="menu_item"><a href="#" class="menu_link">CATWAKL</a></li>
+					<li class="menu_item"><a href="#" class="menu_link">FASHION</a></li>
+					<li class="menu_item"><a href="#" class="menu_link">BEAUTY</a></li>
+					<li class="menu_item"><a href="#" class="menu_link">PEOPLE</a></li>
+					<li class="menu_item"><a href="#" class="menu_link">VIDEO</a></li>
+					<li class="menu_item">
+						<a href="#" onclick="dropDownbtn()" class="menu_link munu_link_dropdown-menu">
+							<span>MORE</span>
+						</a>
+						<ul id="dropDownContent" class="dropdown_cnt_list" style="display:none;">
+							<li class="dropdown_cnt_item"><a href="#" class="dropdown_cnt_link">menu1</a></li>
+							<li class="dropdown_cnt_item"><a href="#" class="dropdown_cnt_link">menu2</a></li>
+							<li class="dropdown_cnt_item"><a href="#" class="dropdown_cnt_link">menu3</a></li>
+							<li class="dropdown_cnt_item"><a href="#" class="dropdown_cnt_link">menu4</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
 		</div>
 
 	<script>
+
+		/* menu 슬라이드 */
 		function myNavbtn(){
-			document.getElementById("myNav").style.display="block";
-			document.getElementById("wrap").style.marginRight="30%";
+			var x = document.getElementById('myNav');
+			if (x.style.right === '-60%'){
+				x.style.right = '0';
+			}else{
+				x.style.right = '-60%';
+			}
+
 		}
 
+		/* 메뉴 드롭다운 */
+		function dropDownbtn(){
+			var y = document.getElementById('dropDownContent');
+			if(y.style.display === 'none'){
+				y.style.display = 'block';
+			}else{
+				y.style.display  = 'none';
+			}
+		}
 	</script>
 	</body>
 </html>
