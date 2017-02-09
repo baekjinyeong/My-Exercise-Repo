@@ -7,13 +7,15 @@
 	</head>
 	<body>
 		<div id="wrap">
+			<div class="dimd"></div>
 			<header class="header_wrapper">
 				<h1 class="logo">로고</h1>
 				<a href="#" class="menu_btn" onclick="myNavbtn()">
 					<span></span>
 				</a>
 			</header>
-			<nav id="myNav" class="nav" style="right:-60%;">
+
+			<nav id="myNav" class="nav" style="right:-100%;">
 				<ul class="menu_list">
 					<li class="menu_item"><a href="#" class="menu_link">NEWS</a></li>
 					<li class="menu_item"><a href="#" class="menu_link">CATWAKL</a></li>
@@ -34,17 +36,35 @@
 					</li>
 				</ul>
 			</nav>
+			<div class="container">
+				<section class="content_section top_story-section">
+					<h3 class="section_title"></h3>
+					<ul class="common_cnt_list">
+						<li class="common_cnt_item">
+							<a href="#" class="common_cnt_link"><img src="img/sample_02.jpg" alt=""></a>
+						</li>
+						<li class="common_cnt_item">
+							<a href="#" class="common_cnt_link"><img src="img/sample_02.jpg" alt=""></a>
+						</li>
+						<li class="common_cnt_item">
+							<a href="#" class="common_cnt_link"><img src="img/sample_02.jpg" alt=""></a>
+						</li>
+						<li class="common_cnt_item">
+							<a href="#" class="common_cnt_link"><img src="img/sample_02.jpg" alt=""></a>
+						</li>
+					</ul>
+				</section>
+			</div>
 		</div>
 
 	<script>
-
 		/* menu 슬라이드 */
 		function myNavbtn(){
 			var x = document.getElementById('myNav');
-			if (x.style.right === '-60%'){
+			if (x.style.right === '-100%'){
 				x.style.right = '0';
 			}else{
-				x.style.right = '-60%';
+				x.style.right = '-100%';
 			}
 
 		}
@@ -58,6 +78,7 @@
 				y.style.display  = 'none';
 			}
 		}
+
 	</script>
 	</body>
 </html>

@@ -4,12 +4,21 @@
 @import '_common';
 
 #wrap {
-	width:80%;
-	height: 100%;
+	width:100%;
 	margin: 0 auto;
 	transition: 0.5s;
-	border: 1px solid #e9e9e9;
 	border-top: none;
+}
+.dimd{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.7%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	display: none;
 }
 .header_wrapper{
 	padding: 30px 0 20px 0;
@@ -84,6 +93,38 @@ a.dropdown_cnt_link {
 	}
 }
 
+.content_section{
+	padding:0 195px;
+}
+/* top stories */
+.common_cnt_list{
+	&:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+.common_cnt_item{
+	float: left;
+	width: 25%;
+	box-sizing: border-box;
+	padding-left: 45px;
+	&:first-child{
+		margin-left: 0;
+	}
+}
+.common_cnt_link{
+	display: block;
+	img{
+		width: 100%;
+	}
+}
+.top_story-section{
+	padding: 0 150px;
+	.common_cnt_list{
+		margin-top: 80px;
+	}
+}
 
 
 
@@ -93,6 +134,13 @@ a.dropdown_cnt_link {
 		position: relative;
 		width: 100%;
 		border: none;
+	}
+	.top_story-section{
+		padding: 0 150px 0 105px;
+	}
+	.common_cnt_item{
+		width: 50%;
+		margin-bottom: 45px;
 	}
 }
 
@@ -106,8 +154,9 @@ a.dropdown_cnt_link {
 @media screen and (max-width:768px) {
 	#wrap{
 		position: relative;
-		width: 100%;
-		height: 100%;
+		// overflow: hidden;
+	}
+	.container{
 		overflow: hidden;
 	}
 	.header_wrapper{
@@ -164,12 +213,15 @@ a.dropdown_cnt_link {
 	}
 	.nav{
 		position: absolute;
-		width:60%;
-		height: 1000px;
+		width:70%;
+		height: 100%;
 		border-bottom: none;
 		border-left: 1px solid #e9e9e9;
 		border-top: none;
 		transition: 0.5s;
+		z-index: 20;
+		background-color: #fcfcfc;
+		clear: both;
 	}
 	.menu_list{
 		width: 100%;
@@ -177,7 +229,6 @@ a.dropdown_cnt_link {
 		margin: 0;
 		text-align: right;
 		z-index: 2;
-		background-color: #fcfcfc;
 		&:after{
 			display: block;
 			content: "";
@@ -243,6 +294,17 @@ a.dropdown_cnt_link {
 		display: block;
 		padding: 5px 40px;
 		text-decoration: none;
+	}
+	.top_story-section{
+		padding: 0 50px;
+		.common_cnt_list{
+			margin-top: 40px;
+		}
+	}
+	.common_cnt_item{
+		width: 100%;
+		margin-bottom: 45px;
+		padding-left: 0;
 	}
 
 }
