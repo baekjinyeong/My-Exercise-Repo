@@ -2,83 +2,117 @@
 <html lang="ko-KR">
 	<head>
 		<meta charset="UTF-8">
-		<title>반응형웹사이트연습</title>
+		<title>CJ</title>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div id="wrap">
-			<div class="dimd"></div>
+		<div class="wrap">
 			<header class="header_wrapper">
-				<h1 class="logo">로고</h1>
-				<a href="#" class="menu_btn" onclick="myNavbtn()">
-					<span></span>
-				</a>
+				<div class="header_top_menu">
+					<div class="header_menu_utill">
+						<ul class="header_menu-list header_menu-list--left">
+							<li class="header_menu-item"><a href="#" class="header_menu-link">즐겨찾기</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link">앱다운로드</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link">바로방문</a></li>
+						</ul>
+
+						<ul class="header_menu-list header_menu-list--right">
+							<li class="header_menu-item"><a href="#" class="header_menu-link">로그인</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link">회원가입</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link">마이존</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link">장바구니</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link">고객센터</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link event">기획전</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link event">이벤트</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link olive">올리브영</a></li>
+							<li class="header_menu-item"><a href="#" class="header_menu-link first">퍼스트룩</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header_middle_content">
+					<div class="header_menu_utill">
+						<h1 class="cj_logo"><a href="#" class="logo_link"><img src="img/logo.gif" alt="CJ로고"/></a></h1>
+						<div class="header_search">
+							<form action="">
+								<label><input type="search" id="searchVal" class="header_search_input" value=""></label>
+								<button type="button" class="header_search_btn"><span class="hide">검색하기</span></button>
+							</form>
+						</div>
+						<a href="#" class="header_banner">
+							<img src="img/header_banner.gif" alt="" />
+						</a>
+					</div>
+				</div>
+				<nav class="header_main_nav">
+					<ul class="header_menu_utill header_main_nav_list">
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">전체보기</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">TV쇼핑</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">백화점</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">패션/언더웨어</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">뷰티/보석</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">식품/주방</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">인테리어/리빙</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">유아동/도서</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">디지털/여행</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">보험/금융</a></li>
+						<li class="header_main_nav_item"><a href="#" class="header_main_nav_link">잡화/스포츠</a></li>
+					</ul>
+				</nav>
 			</header>
 
-			<nav id="myNav" class="nav" style="right:-100%;">
-				<ul class="menu_list">
-					<li class="menu_item"><a href="#" class="menu_link">NEWS</a></li>
-					<li class="menu_item"><a href="#" class="menu_link">CATWAKL</a></li>
-					<li class="menu_item"><a href="#" class="menu_link">FASHION</a></li>
-					<li class="menu_item"><a href="#" class="menu_link">BEAUTY</a></li>
-					<li class="menu_item"><a href="#" class="menu_link">PEOPLE</a></li>
-					<li class="menu_item"><a href="#" class="menu_link">VIDEO</a></li>
-					<li class="menu_item">
-						<a href="#" onclick="dropDownbtn()" class="menu_link munu_link_dropdown-menu">
-							<span>MORE</span>
-						</a>
-						<ul id="dropDownContent" class="dropdown_cnt_list" style="display:none;">
-							<li class="dropdown_cnt_item"><a href="#" class="dropdown_cnt_link">menu1</a></li>
-							<li class="dropdown_cnt_item"><a href="#" class="dropdown_cnt_link">menu2</a></li>
-							<li class="dropdown_cnt_item"><a href="#" class="dropdown_cnt_link">menu3</a></li>
-							<li class="dropdown_cnt_item"><a href="#" class="dropdown_cnt_link">menu4</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			<div class="container">
-				<section class="content_section top_story-section">
-					<h3 class="section_title"></h3>
-					<ul class="common_cnt_list">
-						<li class="common_cnt_item">
-							<a href="#" class="common_cnt_link"><img src="img/sample_02.jpg" alt=""></a>
-						</li>
-						<li class="common_cnt_item">
-							<a href="#" class="common_cnt_link"><img src="img/sample_02.jpg" alt=""></a>
-						</li>
-						<li class="common_cnt_item">
-							<a href="#" class="common_cnt_link"><img src="img/sample_02.jpg" alt=""></a>
-						</li>
-						<li class="common_cnt_item">
-							<a href="#" class="common_cnt_link"><img src="img/sample_02.jpg" alt=""></a>
+			<div class="conteiner">
+				<div class="main_slide_img">
+					<ul class="main_slide_img_list">
+						<li class="main_slide_item">
+							<div class="upload_bg">
+								<div class="upload_img">
+									<a href="#"><img src="img/main_slide_img1.gif" alt="메인배너" /></a>
+								</div>
+							</div>
 						</li>
 					</ul>
-				</section>
+					<ul class="btn_num_list">
+						<li class="btn_num_item"><a href="#" class="btn_num_link"></a></li>
+						<li class="btn_num_item"><a href="#" class="btn_num_link is-active"></a></li>
+						<li class="btn_num_item"><a href="#" class="btn_num_link"></a></li>
+						<li class="btn_num_item"><a href="#" class="btn_num_link"></a></li>
+					</ul>
+				</div>
+
+				<div class="content_wrapper">
+					<section class="content_item_section">
+						<h2 class="section_title">TV쇼핑</h2>
+						<ul class="section_list">
+							<li class="section_item">
+								<a href="#" class="section_link"><img src="img/content_img1.gif" /></a>
+								<dl class="section_item_info">
+									<dt class="section_item_info-title">슈맹블랑울핸드메이드 코트</dt>
+									<dd class="section_item_info-txt"><span class="info_point">맞춤가</span>148,000원~<span class="info_cancle">149,000원</span></dd>
+									<dd class="section_item_info-txt"><span class="info_sub_txt">24개 구매중</span></dd>
+								</dl>
+							</li>
+							<li class="section_item">
+								<a href="#" class="section_link"><img src="img/content_img2.gif" /></a>
+								<dl class="section_item_info">
+									<dt class="section_item_info-title">진도 끌레베 풀스킨 사가밍크 코트</dt>
+									<dd class="section_item_info-txt"><span class="info_point">맞춤가</span>148,000원~<span class="info_cancle">149,000원</span></dd>
+									<dd class="section_item_info-txt"><span class="info_sub_txt">24개 구매중</span></dd>
+								</dl>
+							</li>
+							<li class="section_item">
+								<a href="#" class="section_link"><img src="img/content_img3.gif" /></a>
+								<dl class="section_item_info">
+									<dt class="section_item_info-title">대천김 전장김 20g 20봉 + 도시락 김 24봉</dt>
+									<dd class="section_item_info-txt"><span class="info_point">생방송</span>00:51:40</dd>
+									<dd class="section_item_info-txt"><span class="info_sub_txt">24개 구매중</span></dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+				</div>
 			</div>
+
+
 		</div>
-
-	<script>
-		/* menu 슬라이드 */
-		function myNavbtn(){
-			var x = document.getElementById('myNav');
-			if (x.style.right === '-100%'){
-				x.style.right = '0';
-			}else{
-				x.style.right = '-100%';
-			}
-
-		}
-
-		/* 메뉴 드롭다운 */
-		function dropDownbtn(){
-			var y = document.getElementById('dropDownContent');
-			if(y.style.display === 'none'){
-				y.style.display = 'block';
-			}else{
-				y.style.display  = 'none';
-			}
-		}
-
-	</script>
 	</body>
 </html>
