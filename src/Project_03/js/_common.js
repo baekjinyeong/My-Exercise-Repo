@@ -3,6 +3,6 @@
 /*! _common.js */
 (function () {
 	'use strict';
+	// console.log('_common.js');
 
-	console.log('_common.js');
 }());
