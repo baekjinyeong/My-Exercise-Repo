@@ -112,10 +112,14 @@ header{
 		right: 0;
 		top: 40px;
 	}
+	.header_main_nav_list {
+		height: 35px;
+	}
 	.header_main_nav_item{
+		width: 85px;
 		display: inline-block;
-		margin-left: 26px;
 		padding-bottom: 24px;
+		text-align: center;
 		&:first-child{
 			margin-left: 0;
 		}
@@ -123,6 +127,27 @@ header{
 			font-size: 14px;
 			color: #666;
 			letter-spacing: -1px;
+			&:hover{
+				color: #00a9e0;
+				transition: all 0.8s ease;
+			}
+		}
+		&:hover {
+			background-color: rgba(0,169,224,.1);
+			transition: all 0.8s ease;
+		}
+	}
+	.dropdown_nav_list{
+		text-align: center;
+		padding: 20px 0 0 0;
+		font-size: 13px;
+	}
+	.dropdown_nav_item{
+		& ~ .dropdown_nav_item {
+			margin: 7px 0 0 0;
+		}
+		& > a {
+			text-align: center;
 		}
 	}
 }
@@ -465,15 +490,12 @@ header{
 		.popular_item{
 		}
 		.popular_link{
-			display: inline-block;
+			display: flex;
 			text-align: center;
 			justify-content: center;
+			align-items: center;
 			& > img {
 				position: absolute;
-				display: flex;
-				border: 1px solid blue;
-				justify-content: center;
-				align-items: center;
 			}
 		}
 	}
