@@ -103,7 +103,6 @@
 
 				<div id="myNav" class="mynav overlay">
 					<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-
 					<div class="overlay-content">
 						<a href="#">About</a>
 						<a href="#">Services</a>
@@ -113,7 +112,6 @@
 				</div>
 				<div id="myNav2" class="mynav overlay2">
 					<a href="#" class="closebtn" onclick="closeNav2()">&times;</a>
-
 					<div class="overlay-content">
 						<a href="#">About</a>
 						<a href="#">Services</a>
@@ -135,76 +133,134 @@
 						<a href="#">Contact</a>
 					</div>
 				</div>
-
 			</div>
-			<div class="content_box">
-				<p class="menu_ex_title"> TEST</p>
-				<a href="#" class="openbtn" onclick="openbtn()">OPEN</a>
-				<div id="myNav3" class="mynav overlay3">
-					<a href="#" class="closebtn" onclick="closeNav3()">&times;</a>
-					<div class="overlay-content">
-						<a href="#">About</a>
-						<a href="#">Services</a>
-						<a href="#">Clients</a>
-						<a href="#">Contact</a>
+
+			<!-- SlideEffect -->
+			<div class="content_box slide_effect">
+				<p class="menu_ex_title"> How TO - SlideEffect</p>
+				<div class="slide_effect_block">
+					<ul>
+						<li class="box black"><span class="box_text">box1</span></li>
+						<li class="box green"><span class="box_text">box2</span></li>
+						<li class="box purple"><span class="box_text">box3</span></li>
+						<li class="box red"><span class="box_text">box4</span></li>
+					</ul>
+					<button class="display_left" onclick="plusDivs(-1)" >&#10094;</button>
+					<button class="display_right" onclick="plusDivs(1)">&#10095;</button>
+					<div class="circle_area">
+						<a href="#" class="circle is-active"><span class="blind">1</span></a>
+					    <a href="#" class="circle"><span class="blind">2</span></a>
+					    <a href="#" class="circle"><span class="blind">3</span></a>
+						<a href="#" class="circle"><span class="blind">4</span></a>
 					</div>
 				</div>
-
 			</div>
+
+			<script>
+				// 변수를 선언한다.
+				// li의 인덱스 번호를 찾는다.
+				// 버튼을 활성화 시킨다.
+				// li의 인덱스 번호로 화살표 버튼 클릭 시 화면을 전환시킨다.
+
+				var slideIndex = 1; // 변수 slideIndex = 1을 선언한다.
+				showDivs(slideIndex); // showDivs안에 slideIndex 를 담는다.
+
+				function plusDivs(n) { // 함수 plusDivs(n) 을 선언한다.
+					showDivs(slideIndex += n);
+				}
+
+				function circleDivs(n) {
+					showDivs(slideIndex += n);
+				}
+
+				function showDivs(n) {
+					var x = document.getElementsByClassName('box'); // li를 가져온다.
+
+					if (n > x.length) { // 만약 n 이 li의 길이보다 크다면...
+						slideIndex = 1; // slideIndex 는 1이다.
+					}else if (n < 1) { // 그렇지 않고 n 이 1보다 작으면..
+						slideIndex = x.length; // slideIndex 는 li의 길이와 같다.
+					}
+
+					for (var i = 0; i < x.length; i++){ // i는 0이고 i가 li의 길이보다 작을 때 i를 증가시킨다.
+						x[i].style.display = 'none'; // li의 인덱스 값을 찾아서 display = none; 시킨다.
+						console.log(x[i]);
+					}
+					x[slideIndex-1].style.display = 'block';
+				}
+			</script>
+			<!-- //SlideEffect 1 -->
+
 		</main>
 
+		<script>
+			function openCnt(evt,cityName){
+				var i, tabcontent, tablink;
 
-		<!-- <script src="vendor/library.js"></script>
-		<script src="js/script.js"></script> -->
-<script>
-	function openCnt(evt,cityName){
-		var i, tabcontent, tablink;
+				tabcontent = document.getElementsByClassName("tab_content");
 
-		tabcontent = document.getElementsByClassName("tab_content");
+				for (i=0; i<tabcontent.length; i++){
+					tabcontent[i].style.display = "none";
+				}
 
-		for (i=0; i<tabcontent.length; i++){
-			tabcontent[i].style.display = "none";
-		}
+				tablink = document.getElementsByClassName("tab_link");
 
-		tablink = document.getElementsByClassName("tab_link");
+				for (i=0; i<tablink.length; i++){
+					tablink[i].className = tablink[i].className.replace("active","");
+				}
 
-		for (i=0; i<tablink.length; i++){
-			tablink[i].className = tablink[i].className.replace("active","");
-		}
-
-		document.getElementById(cityName).style.display = "block";
-		evt.currentTarget.className += "active";
-	}
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += "active";
+			}
 
 
-	/* slide Right */
-	function openNav() {
-	    document.getElementById("myNav").style.width = "100%";
-	}
+			/* slide Right */
+			function openNav() {
+			    document.getElementById("myNav").style.width = "100%";
+			}
 
-	function closeNav() {
-	    document.getElementById("myNav").style.width = "0%";
-	}
+			function closeNav() {
+			    document.getElementById("myNav").style.width = "0%";
+			}
 
-	/* slide Down */
-	function slideDownNav(){
-		document.getElementById("myNav2").style.height = "100%";
-	}
-	function closeNav2(){
-		document.getElementById("myNav2").style.height = "0%";
-	}
+			/* slide Down */
+			function slideDownNav(){
+				document.getElementById("myNav2").style.height = "100%";
+			}
+			function closeNav2(){
+				document.getElementById("myNav2").style.height = "0%";
+			}
 
-	/* Sidenav Push Content */
-	function openbtn(){
-		document.getElementById("myNav3").style.width = "20%";
-		document.getElementById("wrap").style.marginLeft = "20%";
+			/* Sidenav Push Content */
+			function openbtn(){
+				document.getElementById("myNav3").style.width = "20%";
+				document.getElementById("wrap").style.marginLeft = "20%";
 
-	}
-	function closeNav3() {
-		document.getElementById("myNav3").style.width = "0";
-		document.getElementById("wrap").style.marginLeft = "0";
-	}
+			}
+			function closeNav3() {
+				document.getElementById("myNav3").style.width = "0";
+				document.getElementById("wrap").style.marginLeft = "0";
+			}
 
-</script>
+
+
+			/* SlideEffect */
+
+
+			// 냉장고에 코끼리를 넣는 방법
+			// 냉장고에 문을 연다.
+			// 코끼리를 넣는다.
+			// 문을 닫는다.
+			//=============================================================================================
+
+
+
+
+
+
+
+		</script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>

@@ -216,3 +216,74 @@ a.full_screen_nav-link {
 		right: 50px;
 	}
 }
+
+/* SlideEffect Content */
+.slide_effect_block {
+	position: relative;
+	max-width: 300px;
+}
+.slide_effect {
+	width: auto;
+	ul {
+		&:after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+	.box {
+		width: 300px;
+		height: 200px;
+		float: left;
+	}
+	.box_text {
+		display: block;
+		margin-top: 90px;
+		font-size: 15px;
+		color: #fff;
+		text-align: center;
+	}
+	.black {
+		background: black;
+	}
+	.red {
+		background: red;
+	}
+	.green {
+		background: green;
+	}
+	.purple {
+		background: purple;
+	}
+	.display_left {
+		position: absolute;
+		top: 47%;
+		left: 0;
+	}
+	.display_right {
+		position: absolute;
+		top: 47%;
+		right: 0;
+	}
+	.circle_area {
+		position: absolute;
+		left: 50%;
+		bottom: 10px;
+		margin-left: -35px;
+		text-align: center;
+	}
+	.circle {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background: #fff;
+		border-radius: 50%;
+		text-align: center;
+		& ~ .circle {
+			margin-left: 5px;
+		}
+		&.is-active {
+			background: gray;
+		}
+	}
+}
