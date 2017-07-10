@@ -103,7 +103,6 @@
 
 				<div id="myNav" class="mynav overlay">
 					<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-
 					<div class="overlay-content">
 						<a href="#">About</a>
 						<a href="#">Services</a>
@@ -113,7 +112,6 @@
 				</div>
 				<div id="myNav2" class="mynav overlay2">
 					<a href="#" class="closebtn" onclick="closeNav2()">&times;</a>
-
 					<div class="overlay-content">
 						<a href="#">About</a>
 						<a href="#">Services</a>
@@ -135,76 +133,400 @@
 						<a href="#">Contact</a>
 					</div>
 				</div>
-
 			</div>
+
 			<div class="content_box">
-				<p class="menu_ex_title"> TEST</p>
-				<a href="#" class="openbtn" onclick="openbtn()">OPEN</a>
-				<div id="myNav3" class="mynav overlay3">
-					<a href="#" class="closebtn" onclick="closeNav3()">&times;</a>
-					<div class="overlay-content">
-						<a href="#">About</a>
-						<a href="#">Services</a>
-						<a href="#">Clients</a>
-						<a href="#">Contact</a>
+				<p class="menu_ex_title">How To - example</p>
+				<div class="align_example_block">
+					<div class="square left_square"><span class="box_title">왼쪽정렬</span></div>
+					<div class="square right_square"><span class="box_title">오른쪽정렬</span></div>
+				</div>
+			</div>
+
+			<div id="content">
+				<div class="toolbar is-active">
+					<button id="btn-new" class="btn" data-action="menu">New</button>
+				</div>
+			</div>
+			<div id="menu-new" class="menu">
+				<ul>
+					<li id="about">가나다라마바사</li>
+					<li>가나다라마바사</li>
+					<li>가나다라마바사</li>
+					<li>가나다라마바사</li>
+				</ul>
+			</div>
+			<script>
+				function doTheThing(){
+					alert('이게 바로 그겁니당당당.')
+				}
+				var elem = document.getElementById("about");
+
+				//addEventListener(event, function, useCapture)
+				elem.addEventListener("click",doTheThing,false);
+			</script>
+
+			<button type="button" id="hide">텍스트를 감춥니다.</button>
+			<div id="target">
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />
+					Lorem Ipsum has been the industry's<br />
+					standard dummy text ever since the 1500s,<br />
+					when an unknown printer took a galley of type<br />
+					and scrambled it to make a type specimen book.<br />
+					It has survived not only five centuries,<br />
+					but also the leap into electronic typesetting,<br />
+					remaining essentially unchanged.
+				</p>
+			</div>
+			<script>
+			// 2개의 노드를 변수에 할당
+				var button = document.getElementById("hide"), // button = #hide
+					hide = document.getElementById("target"); // hide = #target
+
+			// 하고싶은 일을 함수에 정의
+				function hide() { // 함수 hide 선언
+					// setAttribute : 선택한 요소(element)의 속성(attribute) 값을 정함.
+					target.setAttribute("class","hide"); // 타겟 요소의 클래스는 hide//..
+				}
+
+			// 버튼이 클릭됐을 때 CSS 클래스를 추가
+				//addEventListener(event, function, useCapture)
+				button.addEventListener("click",hide,false);
+
+				console.log(target); // <div id="target"> ...</div>
+				console.log(button); // <button type="button" id="hide">텍스트를 감춥니다.</button>
+			</script>
+
+			<!-- <script>
+				function getFamilyMemberName(){
+					"use strict"
+
+					// 가족 구성원의 이름을 배열에 저장
+					var family = [
+						"조안",
+						"찰리",
+						"피터",
+						"크리스틴",
+						"안나",
+						"팀"
+					];
+
+					var peopleCount = family.length;
+					var i;
+
+					// 목록 안에 사람들이 있는지 확인
+					if (peopleCount > 0) {
+						for (i = 0;i < peopleCount; i = i + 1){
+							console.log(peopleCount);
+							var person = family[i];
+
+							//가족 구성원이 "팀" 이면 특별한 작업을 수행
+							if(person === "팀") {
+								alert(person + ", 이게 바로 접니다!");
+							}else {
+								alert(person);
+							}
+						}
+					}
+				}
+
+				// getFamilyMemberName();
+				// window.addEventListener("load", getFamilyMemberName, false);
+				window.addEventListener("click", getFamilyMemberName, false);
+				// 함수호출
+			</script> -->
+
+			<ul id="nav">
+				<li><a href="#" id="home">홈</a></li>
+				<li><a href="#" id="intro">소개</a></li>
+				<li><a href="#" id="contact">연락처</a></li>
+			</ul>
+			<!-- <script type="text/JavaScript">
+				document.getElementById("intro").parentNode.setAttribute("class","active");
+				// document.getElementById("intro").parentNode.previousSibling.setAttribute("class","prev");
+				// document.getElementById("intro").parentNode.nextSibling.setAttribute("calss","next");
+
+				document.getElementById("nav").firstChild.setAttribute("class","first");
+			</script> -->
+			<!-- <script>
+				window.addEventListener("load",function(){
+					alert("콜백 함수");
+				}, false);
+			</script> -->
+
+			<div id="target-area">
+				<p id="tagline">Hello World!</p>
+			</div>
+
+			<script>
+				// 코드를 깔끔하게 유지하기 위해 대상 영역을 변수에 저장
+				var targetArea = document.getElementById("target-area");
+
+				// <p> 엘리먼트를 생성
+				var p = document.createElement("p");
+
+				// <p> 안에 텍스트 노드를 생성. 참고로 여기서는 변수 "p"를 사용
+				// var snippet = p.createTextNode("새로 생성된 단락입니다");
+
+				// 생성된 단락을 DOM에 삽입
+				// targetArea.appendChild(snippet);
+			</script>
+
+
+			<!-- SlideEffect -->
+			<div class="content_box slide_effect">
+				<p class="menu_ex_title"> How TO - SlideEffect</p>
+				<div class="slide_effect_block">
+					<ul>
+						<li class="box black"><span class="box_text">box1</span></li>
+						<li class="box green"><span class="box_text">box2</span></li>
+						<li class="box purple"><span class="box_text">box3</span></li>
+						<li class="box red"><span class="box_text">box4</span></li>
+					</ul>
+					<button class="display_left" onclick="plusDivs(-1)" >&#10094;</button>
+					<button class="display_right" onclick="plusDivs(1)">&#10095;</button>
+					<div class="circle_area">
+						<a href="#" class="circle is-active"><span class="blind">1</span></a>
+					    <a href="#" class="circle"><span class="blind">2</span></a>
+					    <a href="#" class="circle"><span class="blind">3</span></a>
+						<a href="#" class="circle"><span class="blind">4</span></a>
 					</div>
 				</div>
-
 			</div>
+
+			<!-- <script>
+				function sayHello(message){
+					alert(message);
+				}
+				(function(){
+					var greeting="abcdefg",
+						exitStatement = "hijknmlop";
+
+					sayHello(greeting);
+					sayHello(exitStatement);
+				})();
+			</script> -->
+			<!-- <script>
+				i = 1;
+				while (i < 10) {
+					if(i==2 || i==5 || i==8){
+						j=1;
+						while (j < 10) {
+							console.log(i+"*"+j+"="+i*j);
+							j++;
+						}
+					}
+					i++;
+				}
+			</script> -->
+			<script>
+				function print99(x,y){
+					for(var i=x; i<y+1; i++){
+						for(var j=2; j<10; j++){
+							console.log(i+"*"+j+"="+i*j);
+						}
+					}
+				}
+				print99(3,6);
+			</script>
+			<!-- <script>
+				var breakfast = ["a","b","c"];
+
+				breakfast.push("d");
+
+				alert(breakfast);
+
+				alert(breakfast[3]);
+			</script> -->
+
+			<script>
+
+			// JSON : 자바스크립트에서 데이터를 저장하는 방법
+			// 		  자바스크립트 객체표기법을 나타내며 서버와 클라이언트 간에 데이터를 교환하는 굉장히 가벼운 형식
+			</script>
+
+			<script>
+				function sayHello(greeting, exitStatement){
+					var newGreeting = greeting + "!",
+						newExitStatement = exitStatement + "!!";
+
+						// 인자를 배열로 반환
+						return [newGreeting, newExitStatement];
+						console.log(newGreeting);
+				}
+				function startle(polite, rude) {
+					// sayHello 함수를 호출하고, 인자와 동일한 각 응답을 변수에 할당
+					var greeting = sayHello(polite, rude)[0];
+						exit = sayHello(polite, rude)[1];
+
+					// 각 함수에 전달했던 변수를 출력
+					alert(greeting + "--" + exit);
+				}
+
+				// 우리가 정의한 인자로 함수를 호출
+				startle("고맙습니다.","안뇽허세요.");
+			</script>
+
+			<script>
+				var contacts = {
+					"addressBook" : [
+						{
+							"name":"ggggggg",
+							"email":"hillisha@example.com",
+						},
+						{
+							"name":"ggggggg",
+							"email":"ggggggggg@example.com",
+						},
+						{
+							"name":"ggdsfdsdf",
+							"email":"sfsfsdfsdf@example.com",
+						},
+						{
+							"name":"qweqweqw",
+							"email":"qeqeqweqe@example.com",
+						},
+						{
+							"name":"nnnnn",
+							"email":"nnnnnn@example.com",
+						},
+						{
+							"name":"ddd",
+							"email":"ddd@example.com"
+						}
+					]
+
+				}
+console.log(contacts);
+				var object = contacts.addressBook,
+					contactsCount = object.length,
+					i;
+
+				if(contactsCount > 0) {
+					for (i = 0; i < contactsCount; i = i+1){
+						var item = object[i],
+						name = item.name,
+						email = item.email;
+
+						target.innerHTML += '<p><a href="mailto:'+ email + '">' + name + '</a></p>';
+
+					}
+				}
+				if (name === "hillisha"){
+					target.innerHTML += '<p><a href="mailto:' + email + '">' + name + '</a>!</p>';
+				} else if (name === "ggggggg") {
+					target.innerHTML += '<p><a href="mailto:' + email + '">' + name + '</a>?</p>';
+				}
+
+			</script>
+
+
+			<!-- <script>
+				// 변수를 선언한다.
+				// li의 인덱스 번호를 찾는다.
+				// 버튼을 활성화 시킨다.
+				// li의 인덱스 번호로 화살표 버튼 클릭 시 화면을 전환시킨다.
+
+				var slideIndex = 1; // 변수 slideIndex = 1을 선언한다.
+				showDivs(slideIndex); // showDivs안에 slideIndex 를 담는다.
+
+				function plusDivs(n) { // 함수 plusDivs(n) 을 선언한다.
+					showDivs(slideIndex += n);
+				}
+
+				// function circleDivs(n) {
+				// 	showDivs(slideIndex += n);
+				// }
+
+				function showDivs(n) {
+					var x = document.getElementsByClassName('box'); // li를 가져온다.
+
+					if (n > x.length) { // 만약 n 이 li의 길이보다 크다면...
+						slideIndex = 1; // slideIndex 는 1이다.
+					}else if (n < 1) { // 그렇지 않고 n 이 1보다 작으면..
+						slideIndex = x.length; // slideIndex 는 li의 길이와 같다.
+					}
+
+					for (var i = 0; i < x.length; i++){ // i는 0이고 i가 li의 길이보다 작을 때 i를 증가시킨다.
+						x[i].style.display = 'none'; // li의 인덱스 값을 찾아서 display = none; 시킨다.
+						console.log(x[i]);
+					}
+					x[slideIndex-1].style.display = 'block';
+				}
+			</script> -->
+			<!-- //SlideEffect 1 -->
+
 		</main>
 
+		<script>
+			function openCnt(evt,cityName){
+				var i, tabcontent, tablink;
 
-		<!-- <script src="vendor/library.js"></script>
-		<script src="js/script.js"></script> -->
-<script>
-	function openCnt(evt,cityName){
-		var i, tabcontent, tablink;
+				tabcontent = document.getElementsByClassName("tab_content");
 
-		tabcontent = document.getElementsByClassName("tab_content");
+				for (i=0; i<tabcontent.length; i++){
+					tabcontent[i].style.display = "none";
+				}
 
-		for (i=0; i<tabcontent.length; i++){
-			tabcontent[i].style.display = "none";
-		}
+				tablink = document.getElementsByClassName("tab_link");
 
-		tablink = document.getElementsByClassName("tab_link");
+				for (i=0; i<tablink.length; i++){
+					tablink[i].className = tablink[i].className.replace("active","");
+				}
 
-		for (i=0; i<tablink.length; i++){
-			tablink[i].className = tablink[i].className.replace("active","");
-		}
-
-		document.getElementById(cityName).style.display = "block";
-		evt.currentTarget.className += "active";
-	}
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += "active";
+			}
 
 
-	/* slide Right */
-	function openNav() {
-	    document.getElementById("myNav").style.width = "100%";
-	}
+			/* slide Right */
+			function openNav() {
+			    document.getElementById("myNav").style.width = "100%";
+			}
 
-	function closeNav() {
-	    document.getElementById("myNav").style.width = "0%";
-	}
+			function closeNav() {
+			    document.getElementById("myNav").style.width = "0%";
+			}
 
-	/* slide Down */
-	function slideDownNav(){
-		document.getElementById("myNav2").style.height = "100%";
-	}
-	function closeNav2(){
-		document.getElementById("myNav2").style.height = "0%";
-	}
+			/* slide Down */
+			function slideDownNav(){
+				document.getElementById("myNav2").style.height = "100%";
+			}
+			function closeNav2(){
+				document.getElementById("myNav2").style.height = "0%";
+			}
 
-	/* Sidenav Push Content */
-	function openbtn(){
-		document.getElementById("myNav3").style.width = "20%";
-		document.getElementById("wrap").style.marginLeft = "20%";
+			/* Sidenav Push Content */
+			function openbtn(){
+				document.getElementById("myNav3").style.width = "20%";
+				document.getElementById("wrap").style.marginLeft = "20%";
 
-	}
-	function closeNav3() {
-		document.getElementById("myNav3").style.width = "0";
-		document.getElementById("wrap").style.marginLeft = "0";
-	}
+			}
+			function closeNav3() {
+				document.getElementById("myNav3").style.width = "0";
+				document.getElementById("wrap").style.marginLeft = "0";
+			}
 
-</script>
+
+
+			/* SlideEffect */
+
+
+			// 냉장고에 코끼리를 넣는 방법
+			// 냉장고에 문을 연다.
+			// 코끼리를 넣는다.
+			// 문을 닫는다.
+			//=============================================================================================
+
+
+
+
+
+
+
+		</script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
