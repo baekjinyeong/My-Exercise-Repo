@@ -2,7 +2,7 @@
 
 /*! _common.js */
 // (function () {
-// 	'use strict';
+// 	'use strict'; // 장기적으로 더 깔끔하고 확장 가능한 코드를 작성하는데 도움.
 // 	// console.log('_common.js');
 // 	$('.header_main_nav_all').hover(
 // 		function(){
