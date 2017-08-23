@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+@import '_base';
+@import '_common';
+h1 {
+	text-align: center;
+}
+
+/* 과제2 */
+.sponser_link_guide {
+	margin: 40px auto 60px;
+	max-width: 900px;
+	.title_header{
+		position: relative;
+		margin-bottom: 3px;
+		.self-clear;
+	}
+	.sponser_link_subject {
+		margin: 0;
+		float: left;
+		font-size: 15px;
+	}
+	.sponser_link__advertisement {
+		display: inline-block;
+		margin-left: 8px;
+	    padding: 1px 3px 2px;
+	    border: 1px solid #ddd;
+		border-radius: 2px;
+	    font-size: 11px;
+	    font-weight: normal;
+	}
+	.sponser_ad_app {
+		text-align: right;
+		display: block;
+		margin-top: 3px;
+		padding-right: 22px;
+		float: right;
+		font-weight: bold;
+		&:before {
+			display: inline-block;
+			position: absolute;
+			content: "";
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			border: 1px solid #ddd;
+			top: 4px;
+			right: 0;
+		}
+		&:after {
+			display: block;
+			position: absolute;
+			content: "";
+			top: 10px;
+			right: 6px;
+			width: 4px;
+			height: 4px;
+			border-width: 1px 1px 0 0;
+			border-style: solid;
+			border-color: #282828;
+			transform: rotate(45deg);
+		}
+	}
+}
+.sponser_guide_list {
+	border-top: 1px solid #ddd;
+}
+.sponser_guide_item {
+	position: relative;
+	padding: 18px 0 14px 30px;
+	font-size: 11px;
+	border-bottom: 1px solid #ececec;
+	.guide_title {
+		display: inline-block;
+		&:after {
+			position: absolute;
+			display: inline-block;
+			content: "";
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 1px solid #ddd;
+			top: 18px;
+			left: 0;
+		}
+	}
+	.guide_info {
+		display: inline-block;
+		color: #5e636d;
+	}
+	.guide_address {
+		display: block;
+		margin-top: 4px;
+		.address_link {
+			display: inline-block;
+			color: #2e8de5;
+		}
+	}
+	.guide_num {
+		position: absolute;
+		left: 8px;
+		top: 21px;
+	}
+}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+	.sponser_guide_wrap {
+		padding: 0 15px;
+	}
+	.sponser_link_guide {
+		width: 100%;
+	}
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+	h1 {
+		font-size: 20px;
+	}
+	.sponser_link_guide {
+		margin: 30px auto 30px;
+		.sponser_link_subject {
+			font-size: 13px;
+		}
+		.sponser_ad_app {
+			font-size: 11px;
+		}
+	}
+	.sponser_guide_item {
+		padding: 12px 0 10px 30px;
+		.sponser_guide_title {
+			display: block;
+		}
+		.guide_title {
+			display: inline-block;
+			&:after {
+				top: 11px;
+			}
+		}
+		.guide_info {
+			display: block;
+			margin-top: 3px;
+			padding-left: 8px;
+			text-indent: -8px;
+		}
+		.guide_num {
+			top: 14px;
+		}
+	}
+}
+
+/* 최소 사이즈 처리 */
+@media screen and (max-width:320px) {
+
+}
